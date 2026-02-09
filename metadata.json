@@ -1,0 +1,8 @@
+{
+  "name": "CHAY CHU VAN NGHE V26",
+  "description": "A professional ticker display application with a configurable background (YouTube or Image) and real-time data fetching from Google Sheets.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticker Display System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes ticker-rtl {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes ticker-ltr {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .ticker-animation-rtl {
+            animation: ticker-rtl var(--duration) linear infinite;
+        }
+        .ticker-animation-ltr {
+            animation: ticker-ltr var(--duration) linear infinite;
+        }
+        .animate-bg-fade {
+            animation: fadeIn 1.2s ease-in-out forwards;
+        }
+        body, html, #root {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+
+        /* Professional Dark Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; /* gray-900 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151; /* gray-700 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4B5563; /* gray-600 */
+        }
+        
+        /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #374151 #111827;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div id="root"></div>
+</body>
+</html>
